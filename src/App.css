@@ -1,0 +1,10 @@
+.header-links {
+  margin-left: 60px !important;
+}
+
+.header-links:hover {
+  color: #616c84;
+}
+.join-btn {
+  margin-left: 50px !important;
+}

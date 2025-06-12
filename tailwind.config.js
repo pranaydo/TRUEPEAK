@@ -4,11 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#004aad",
-        secondary: "#f8e9dc",
-        accent: "#ffb703",
-        dark: "#111827",
-        light: "#f9fafb",
+        navlinks: "#18243A",
+        // navlinks: "#FF0000", //red color for testing
+        primary: "#616c84",
+        secondary: "#505a6e",
       },
       fontFamily: {
         navbar: ["Nunito", "sans-serif"],
