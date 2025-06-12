@@ -2,7 +2,33 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#004aad",
+        secondary: "#f8e9dc",
+        accent: "#ffb703",
+        dark: "#111827",
+        light: "#f9fafb",
+      },
+      fontFamily: {
+        navbar: ["Nunito", "sans-serif"],
+        heading: ["Poppins", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+      },
+      fontSize: {
+        h1: "2.25rem", // 36px
+        h2: "1.875rem", // 30px
+        base: "1rem", // 16px
+        sm: "0.875rem", // 14px
+      },
+      spacing: {
+        section: "5rem",
+        "section-sm": "3rem",
+      },
+      borderRadius: {
+        xl: "1.25rem",
+      },
+    },
   },
   plugins: [],
 };
