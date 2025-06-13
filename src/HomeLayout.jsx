@@ -9,6 +9,7 @@ import ScienceBehindServices from "./components/ScienceBehindServices";
 import Footer from "./components/Footer";
 import Videosection from "./components/Videosection";
 import TransformNow from "./components/TransformNow";
+import TestimonialShowcase from "./components/Testimonial";
 
 const HomeLayout = () => {
   return (
@@ -20,6 +21,7 @@ const HomeLayout = () => {
       <RunningText />
       <SolutionsWithPurpose />
       <ScienceBehindServices />
+      <TestimonialShowcase />
       <Videosection />
       <TransformNow />
       <Footer />
