@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import luca1 from "../assets/Doctor.jpg";
-import luca2 from "../assets/Doctor.jpg";
-import james from "../assets/Doctor.jpg";
+import luca1 from "../assets/testomonial1.png";
+import luca2 from "../assets/testomonial12.png";
+import james from "../assets/testomonial13.png";
 
 const testimonials = [
   {
@@ -28,7 +28,7 @@ const TestimonialSection = () => {
 
   return (
     <section className="bg-white px-6 md:px-16 py-16">
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 relative">
+      <div className="flex flex-col md:flex-row items-start gap-10 relative">
         {/* Left Side */}
         <div className="md:w-1/2 relative">
           <div className="text-[80px] text-[#E3D2A2] leading-[0.6] font-serif">
@@ -39,7 +39,7 @@ const TestimonialSection = () => {
             <br />
             Your Edge.
           </h2>
-          <div className="bg-[#B28C5A] text-white p-6 rounded-xl max-w-sm shadow-md text-base">
+          <div className="bg-[#B28C5A] text-white p-6 rounded-xl shadow-md text-base mt-4">
             “{testimonials[activeIndex].quote}”
           </div>
         </div>
@@ -50,15 +50,26 @@ const TestimonialSection = () => {
             <div
               key={idx}
               onMouseEnter={() => setActiveIndex(idx)}
-              className={`relative overflow-hidden rounded-3xl shadow-lg cursor-pointer transition-transform duration-300 ${
-                activeIndex === idx ? "scale-110" : "scale-100"
-              }`}
+              className="relative rounded-3xl shadow-lg cursor-pointer"
             >
-              <img
-                src={person.image}
-                alt={person.name}
-                className="w-32 md:w-48 h-[300px] object-cover rounded-3xl"
-              />
+              <div
+                className={`transition-transform duration-300 ${
+                  activeIndex === idx
+                    ? "scale-[1.25]"
+                    : "hover:scale-[1.2] scale-100"
+                } p-1 bg-white rounded-3xl`}
+              >
+                <img
+                  src={person.image}
+                  alt={person.name}
+                  className="w-32 md:w-48 h-[300px] object-cover rounded-3xl"
+                />
+                {/* {idx === 0 && activeIndex === idx && (
+                  <div className="absolute  left-[30px] transform -translate-x-1/2 text-[30px] text-[#E3D2A2] leading-none">
+                    Luca Moretti
+                  </div>
+                )} */}
+              </div>
               <div className="absolute bottom-4 left-4 text-white font-medium text-lg md:text-xl">
                 {person.name}
               </div>
