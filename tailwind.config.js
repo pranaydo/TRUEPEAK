@@ -22,9 +22,17 @@ export default {
         16: "16px",
         20: "20px",
         24: "24px",
+        26: "26px",
         32: "32px",
         36: "36px",
         48: "48px",
+      },
+      fontWeight: {
+        normal: "400",
+        medium: "500",
+        semibold: "600",
+        bold: "700",
+        extrabold: "800",
       },
       spacing: {
         section: "5rem",
