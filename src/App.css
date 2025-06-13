@@ -8,3 +8,18 @@
 .join-btn {
   margin-left: 50px !important;
 }
+
+/* ANIMATION OF LOGOS SECTION */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.logo-marquee {
+  width: max-content;
+  display: flex;
+  animation: marquee 20s linear infinite;
+}

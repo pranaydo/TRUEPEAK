@@ -6,19 +6,25 @@ export default {
       colors: {
         navlinks: "#18243A",
         // navlinks: "#FF0000", //red color for testing
-        primary: "#616c84",
-        secondary: "#505a6e",
+        primary: "#18243A",
+        secondary: "#E1C78F",
       },
       fontFamily: {
         navbar: ["Nunito", "sans-serif"],
         heading: ["Poppins", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        body: ["Montserrat", "sans-serif"],
       },
       fontSize: {
-        h1: "2.25rem", // 36px
+        heading: "48px", // 36px
         h2: "1.875rem", // 30px
         base: "1rem", // 16px
-        sm: "0.875rem", // 14px
+        14: "0.875rem", // 14px
+        16: "16px",
+        20: "20px",
+        24: "24px",
+        32: "32px",
+        36: "36px",
+        48: "48px",
       },
       spacing: {
         section: "5rem",
