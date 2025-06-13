@@ -3,10 +3,10 @@ import React from "react";
 const IntroSection = () => {
   return (
     <section className="w-full bg-primary py-12 md:py-20 px-4 md:px-0 border-b-4 border-[#7ec3b0] relative">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-32">
         {/* Left: Headline */}
         <div className="md:w-1/2 text-center md:text-left">
-          <h2 className="text-secondary font-body font-bold text-3xl md:text-4xl lg:text-5xl leading-tight">
+          <h2 className="text-secondary font-body font-semibold text-3xl md:text-4xl lg:text-5xl leading-tight text-right ">
             You’re not
             <br />
             starting over.
@@ -17,7 +17,7 @@ const IntroSection = () => {
           </h2>
         </div>
         {/* Right: Paragraph */}
-        <div className="md:w-1/2 text-white font-body text-base md:text-lg lg:text-xl leading-relaxed">
+        <div className="md:w-1/2 text-white font-normal text-28  leading-relaxed text-left">
           <p>
             At TruPeak, we don’t just treat symptoms—
             <br className="hidden md:block" />
