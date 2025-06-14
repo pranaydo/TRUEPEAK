@@ -28,9 +28,9 @@ const IntroSection = () => {
         </div>
       </div>
       {/* Down Arrowbackground: #2C886A; */}
-      <div className="absolute left-8 -bottom-10 md:left-20">
-        <div className="w-24 h-24 bg-[#2C886A] rounded-full flex items-center justify-center shadow-lg">
-          <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
+      <div className="absolute left-8  md:left-20">
+        <div className="w-[8.75rem] h-[8.75rem] bg-[#2C886A] rounded-full flex items-center justify-center shadow-lg">
+          <svg width="60" height="60" fill="none" viewBox="0 0 24 24">
             <path
               d="M12 5v14m0 0l-7-7m7 7l7-7"
               stroke="#fff"
