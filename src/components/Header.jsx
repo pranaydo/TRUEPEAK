@@ -6,7 +6,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden text-white">
+    <div className=" text-26 relative w-full h-screen overflow-hidden text-white">
       {/* Background Video */}
       <video
         autoPlay
@@ -56,14 +56,14 @@ const Header = () => {
         </button>
 
         {/* Left Links (hidden on mobile) */}
-        <div className="hidden md:flex space-x-6  font-semibold text-navlinks">
-          <a className="header-links text-base" href="#">
+        <div className="hidden md:flex space-x-6 text-26 font-semibold text-navlinks">
+          <a className="header-links  text-26" href="#">
             Services
           </a>
-          <a className="header-links text-base" href="#">
+          <a className="header-links " href="#">
             Locations
           </a>
-          <a className="header-links text-base" href="#">
+          <a className="header-links " href="#">
             At-Home
           </a>
         </div>
@@ -78,13 +78,13 @@ const Header = () => {
 
         {/* Right Links (hidden on mobile) */}
         <div className="hidden md:flex items-center space-x-6 text-navlinks font-semibold">
-          <a className="header-links text-base" href="#">
+          <a className="header-links " href="#">
             About Us
           </a>
-          <a className="header-links text-base" href="#">
+          <a className="header-links " href="#">
             Blogs
           </a>
-          <button className="join-btn bg-[#18243A70] text-white px-6 py-2 rounded-full hover:bg-[#505a6e] transition text-base">
+          <button className="join-btn bg-[#18243A70] text-white px-6 py-2 rounded-full hover:bg-[#505a6e] transition ">
             Join Us
           </button>
         </div>
