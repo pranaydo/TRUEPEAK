@@ -97,16 +97,36 @@ const GSAPPopOutCards = () => {
               zIndex: cards.length - i,
             }}
           >
-            <img
-              src={card.image}
-              alt={card.title}
-              className="w-full h-[65%] p-4 object-cover rounded-t-[30px]"
-            />
-            <div className="p-4 flex flex-col justify-between h-[35%]">
-              <h3 className="text-xl font-semibold leading-tight">
+            <div className="relative w-full h-[65%]">
+              <img
+                src={card.image}
+                alt={card.title}
+                className="w-full h-full object-cover p-6 rounded-t-[30px]"
+              />
+              {/* Arrow overlay */}
+              <div className="absolute top-[10%] left-[10%] w-12 h-12 text-black rotate-45 bg-white rounded-full">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 17 18"
+                  fill="black"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className=" bg-white rounded-full w-full h-full p-4"
+                  style={{ transform: "rotate(-40deg)" }} // Rotated 30 degrees left
+                >
+                  <path
+                    d="M0.565936 0.479293L11.8252 0.92765C12.7145 0.963201 13.5534 1.35053 14.1572 2.00446C14.7611 2.65839 15.0805 3.52538 15.0452 4.41477C14.9763 6.14453 13.461 7.61081 11.7448 7.63749L15.4143 11.6113C16.6698 12.9709 16.585 15.0991 15.2254 16.3547C13.8657 17.6102 11.7375 17.5254 10.482 16.1658L6.81256 12.192C6.64951 13.9006 5.06737 15.2945 3.33761 15.2256C2.44824 15.1901 1.60939 14.8028 1.00555 14.1488C0.401699 13.4949 0.0822971 12.6279 0.117579 11.7385L0.565936 0.479293ZM12.4507 5.10327C12.6138 4.95336 12.7286 4.75838 12.7807 4.54308C12.8327 4.32778 12.8197 4.10186 12.7431 3.89401C12.6665 3.68616 12.5299 3.50574 12.3507 3.37565C12.1714 3.24557 11.9575 3.17168 11.7361 3.16337L2.71263 2.80404L2.3533 11.8276C2.34154 12.124 2.448 12.413 2.64929 12.631C2.85057 12.849 3.13018 12.9781 3.42664 12.9899C3.72154 12.9959 4.0073 12.8875 4.224 12.6874C4.4407 12.4873 4.57152 12.211 4.58902 11.9166L4.79635 6.70992L12.1261 14.6476C12.331 14.8505 12.6063 14.9666 12.8946 14.9716C13.183 14.9766 13.4621 14.8703 13.674 14.6746C13.8859 14.479 14.0141 14.2091 14.032 13.9213C14.0499 13.6335 13.9561 13.3498 13.7702 13.1294L6.44044 5.19175L11.6471 5.39909C11.9436 5.41094 12.2327 5.30453 12.4507 5.10327Z"
+                    fill="#18243A"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div className="p-4 flex items-center justify-between h-[35%]">
+              <h3 className="text-md font-semibold leading-tight">
                 {card.title}
               </h3>
-              <button className="mt-2 self-start px-4 py-2 bg-white rounded-full text-sm shadow hover:bg-gray-200">
+              <button className="ml-2 px-4 py-2 bg-white rounded-full text-sm shadow hover:bg-gray-200">
                 Know More
               </button>
             </div>
