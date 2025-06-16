@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import Videosection from "./components/Videosection";
 import TransformNow from "./components/TransformNow";
 import TestimonialShowcase from "./components/Testimonial";
-import SolutionsWithPurpose from "./components/SolutionsWithPurpose.jsx";
+import GSAPCardStack from "./components/SolutionsWithPurpose.jsx";
 
 const HomeLayout = () => {
   // const cardsData = [
@@ -27,7 +27,7 @@ const HomeLayout = () => {
       <Logos />
       <MissionSection />
       <RunningText />
-      <SolutionsWithPurpose />
+      <GSAPCardStack />
       <ScienceBehindServices />
       <TestimonialShowcase />
       <Videosection />
