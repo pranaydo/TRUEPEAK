@@ -9,12 +9,23 @@ const cards = [
   {
     id: 1,
     title: "Injectable Therapies",
-    image: "https://via.placeholder.com/300x200",
+    image:
+      "https://media.istockphoto.com/id/481073846/photo/the-long-hard-road-to-recovery.jpg?s=612x612&w=0&k=20&c=8SK7QeWO9VZpy3ei3eBKLKLdcWpgLOOikyByYdrzkwU=",
   },
-  { id: 2, title: "Card 2", image: "https://via.placeholder.com/300x200" },
-  { id: 3, title: "Card 3", image: "https://via.placeholder.com/300x200" },
-  { id: 4, title: "Card 4", image: "https://via.placeholder.com/300x200" },
-  { id: 5, title: "Card 5", image: "https://via.placeholder.com/300x200" },
+  {
+    id: 2,
+    title: "Card 2",
+    image:
+      "https://media.istockphoto.com/id/1739325597/photo/nurse-senior-woman-and-smile-with-comfort-holding-hands-or-support-in-nursing-home-for.jpg?s=612x612&w=0&k=20&c=BMCKzCUYgUGPlSugqpmKVJ3tNzeh0Sv_HjYcKOrKuKI=",
+  },
+  {
+    id: 3,
+    title: "Card 3",
+    image:
+      "https://img.freepik.com/free-photo/young-doctor-supporting-his-patient_1098-2237.jpg?semt=ais_hybrid&w=740",
+  },
+  // { id: 4, title: "Card 4", image: "https://via.placeholder.com/300x200" },
+  // { id: 5, title: "Card 5", image: "https://via.placeholder.com/300x200" },
 ];
 
 const GSAPPopOutCards = () => {
@@ -89,7 +100,7 @@ const GSAPPopOutCards = () => {
             <img
               src={card.image}
               alt={card.title}
-              className="w-full h-[65%] object-cover rounded-t-[30px]"
+              className="w-full h-[65%] p-4 object-cover rounded-t-[30px]"
             />
             <div className="p-4 flex flex-col justify-between h-[35%]">
               <h3 className="text-xl font-semibold leading-tight">
