@@ -9,16 +9,16 @@ import Footer from "./components/Footer";
 import Videosection from "./components/Videosection";
 import TransformNow from "./components/TransformNow";
 import TestimonialShowcase from "./components/Testimonial";
-import CardStack from "./components/CardStack";
+import SolutionsWithPurpose from "./components/SolutionsWithPurpose.jsx";
 
 const HomeLayout = () => {
-  const cardsData = [
-    { id: 1, content: <p>Card 1</p> },
-    { id: 2, content: <p>Card 2</p> },
-    { id: 3, content: <p>Card 3</p> },
-    { id: 4, content: <p>Card 4</p> },
-    { id: 5, content: <p>Card 5</p> },
-  ];
+  // const cardsData = [
+  //   { id: 1, content: <p>Card 1</p> },
+  //   { id: 2, content: <p>Card 2</p> },
+  //   { id: 3, content: <p>Card 3</p> },
+  //   { id: 4, content: <p>Card 4</p> },
+  //   { id: 5, content: <p>Card 5</p> },
+  // ];
 
   return (
     <>
