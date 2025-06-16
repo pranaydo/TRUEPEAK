@@ -6,32 +6,32 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className=" text-26 relative w-full h-screen overflow-hidden text-white">
-      {/* Background Video */}
+    <div className="relative w-full h-screen text-white overflow-hidden text-base">
+      {/* 🔹 Background Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src={video1} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      {/* Dark Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/30 z-10" />
+      {/* 🔹 Dark Overlay */}
+      <div className="absolute inset-0 bg-black/40 z-10" />
 
-      {/* Header/Navbar */}
-      <header className="relative z-20 flex justify-between items-center px-4 md:px-10 h-[90px] md:h-[100px]">
-        {/* Hamburger Icon */}
+      {/* 🔹 Navigation */}
+      <header className="relative z-30 flex items-center justify-between px-4 md:px-10 py-6">
+        {/* 📱 Hamburger Icon (mobile) */}
         <button
-          className="md:hidden z-40"
           onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-white z-40"
           aria-label="Toggle menu"
         >
           <svg
-            className="w-8 h-8 text-[#1a1a38]"
+            className="w-8 h-8"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -55,81 +55,47 @@ const Header = () => {
           </svg>
         </button>
 
-        {/* Left Links (hidden on mobile) */}
-        <div className="hidden md:flex space-x-6 text-26 font-semibold text-navlinks">
-          <a className="header-links  text-26" href="#">
-            Services
-          </a>
-          <a className="header-links " href="#">
-            Locations
-          </a>
-          <a className="header-links " href="#">
-            At-Home
-          </a>
-        </div>
+        {/* 🔗 Left Nav (desktop only) */}
+        <nav className="hidden md:flex space-x-6 font-semibold text-2xl text-white">
+          <a href="#" className="hover:text-secondary">Services</a>
+          <a href="#" className="hover:text-secondary">Locations</a>
+          <a href="#" className="hover:text-secondary">At-Home</a>
+        </nav>
 
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30 flex items-center">
+        {/* 🔹 Logo - Centered */}
+        <div className="absolute left-1/2 top-[55px] -translate-x-1/2 -translate-y-1/2 z-30">
           <img
             src={logo}
-            alt="Trupeak Health"
-            className="w-[300px] h-[200px] object-contain"
+            alt="Trupeak Health Logo"
+            className="w-[200px] sm:w-[240px] md:w-[280px] object-contain"
           />
         </div>
 
-        {/* Right Links (hidden on mobile) */}
-        <div className="hidden md:flex items-center space-x-6 text-navlinks font-semibold">
-          <a className="header-links " href="#">
-            About Us
-          </a>
-          <a className="header-links " href="#">
-            Blogs
-          </a>
-          <button className="join-btn bg-[#18243A70] text-white px-6 py-2 rounded-full hover:bg-[#505a6e] transition ">
+        {/* 🔗 Right Nav (desktop only) */}
+        <div className="hidden md:flex items-center space-x-6 font-semibold text-2xl text-white">
+          <a href="#" className="hover:text-secondary">About Us</a>
+          <a href="#" className="hover:text-secondary">Blogs</a>
+          <button className="bg-[#18243A70] text-white px-6 py-2 rounded-full hover:bg-[#505a6e] transition">
             Join Us
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* 📱 Mobile Menu */}
         {menuOpen && (
-          <div className="fixed inset-0 bg-black/60 z-30 flex flex-col items-center justify-center md:hidden">
-            <div className="bg-white rounded-xl p-8 space-y-6 text-[#1a1a38] font-semibold shadow-lg">
-              <a
-                className="block text-lg"
-                href="#"
-                onClick={() => setMenuOpen(false)}
-              >
-                Services
-              </a>
-              <a
-                className="block text-lg"
-                href="#"
-                onClick={() => setMenuOpen(false)}
-              >
-                Locations
-              </a>
-              <a
-                className="block text-lg"
-                href="#"
-                onClick={() => setMenuOpen(false)}
-              >
-                At-Home
-              </a>
-              <a
-                className="block text-lg"
-                href="#"
-                onClick={() => setMenuOpen(false)}
-              >
-                About Us
-              </a>
-              <a
-                className="block text-lg"
-                href="#"
-                onClick={() => setMenuOpen(false)}
-              >
-                Blogs
-              </a>
+          <div className="fixed inset-0 bg-black/80 z-20 flex items-center justify-center md:hidden">
+            <div className="bg-white rounded-xl px-8 py-10 space-y-6 text-[#1a1a38] font-semibold text-center w-4/5 max-w-xs">
+              {["Services", "Locations", "At-Home", "About Us", "Blogs"].map((item, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  className="block text-lg hover:text-secondary"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item}
+                </a>
+              ))}
               <button
-                className="join-btn bg-[#616c84] text-white px-5 py-2 rounded-full hover:bg-[#505a6e] transition text-lg w-full"
+                className="bg-[#616c84] text-white w-full py-2 rounded-full hover:bg-[#505a6e] transition"
                 onClick={() => setMenuOpen(false)}
               >
                 Join Us
@@ -138,7 +104,9 @@ const Header = () => {
           </div>
         )}
       </header>
-      <hr className="border-1 border-[#18243A]  z-20 relative" />
+
+      {/* 🔻 Bottom Border */}
+      <hr className="absolute bottom-0 left-0 w-full border-t border-[#18243A] z-20" />
     </div>
   );
 };
