@@ -1,16 +1,15 @@
-import React from "react";
-import forbes from "../assets/partnerslogo/1.png";
-import ndtv from "../assets/partnerslogo/2.png";
-import indiatoday from "../assets/partnerslogo/3.png";
-import wellgood from "../assets/partnerslogo/4.png";
-import businessinsider from "../assets/partnerslogo/5.png";
+import abc from "../assets/logosvg/abc.svg";
+import cnn from "../assets/logosvg/cnn.svg";
+import cosmo from "../assets/logosvg/cosmo.svg";
+import forbes from "../assets/logosvg/forbes.svg";
+import wsj from "../assets/logosvg/wsj.svg";
 
 const logos = [
+  { src: abc, alt: "ABC" },
+  { src: cnn, alt: "CNN" },
+  { src: cosmo, alt: "Cosmopolitan" },
   { src: forbes, alt: "Forbes" },
-  { src: ndtv, alt: "NDTV" },
-  { src: indiatoday, alt: "India Today" },
-  { src: wellgood, alt: "Well+Good" },
-  { src: businessinsider, alt: "Business Insider" },
+  { src: wsj, alt: "Wall Street Journal" },
 ];
 
 const SeenInSection = () => (
@@ -22,7 +21,7 @@ const SeenInSection = () => (
             key={idx}
             src={logo.src}
             alt={logo.alt}
-            className="h-10 w-auto object-contain grayscale opacity-80"
+            className="h-20 w-auto grayscale opacity-80"
           />
         ))}
       </div>

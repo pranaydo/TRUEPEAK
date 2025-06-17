@@ -3,31 +3,39 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      // 🎨 Custom Colors
       colors: {
-        navlinks: "#18243A",
-        // navlinks: "#FF0000", //red color for testing
-        primary: "#18243A",
-        secondary: "#E1C78F",
+        primary: "#18243A", // Used for main backgrounds and text
+        secondary: "#E1C78F", // Accent color (e.g., buttons, highlights)
+        navlinks: "#18243A", // Specific to navbar links (same as primary)
       },
+
+      // 🖋 Custom Fonts
       fontFamily: {
-        navbar: ["Nunito", "sans-serif"],
-        heading: ["Poppins", "sans-serif"],
-        body: ["Montserrat", "sans-serif"],
+        navbar: ["Nunito", "sans-serif"], // For navigation bar text
+        heading: ["Poppins", "sans-serif"], // For titles/headings
+        body: ["Montserrat", "sans-serif"], // For paragraph text
       },
+
+      // 🔠 Font Sizes
       fontSize: {
-        heading: "48px", // 36px
+        heading: "48px", // Custom heading style
         h2: "1.875rem", // 30px
         base: "1rem", // 16px
-        14: "0.875rem", // 14px
-        16: "16px",
-        20: "20px",
-        24: "24px",
-        26: "26px",
-        28: "28px",
-        32: "32px",
-        36: "36px",
-        48: "48px",
+        14: "0.875rem",
+        16: "1rem",
+        20: "1.25rem",
+        24: "1.5rem",
+        26: "1.625rem",
+        28: "1.75rem",
+        32: "2rem",
+        36: "2.25rem",
+        40: "40px",
+        48: "3rem",
+        68: "68px",
       },
+
+      // 💪 Font Weights
       fontWeight: {
         normal: "400",
         medium: "500",
@@ -35,12 +43,16 @@ export default {
         bold: "700",
         extrabold: "800",
       },
+
+      // 📐 Custom Spacing
       spacing: {
-        section: "5rem",
-        "section-sm": "3rem",
+        section: "5rem", // Default section spacing
+        "section-sm": "3rem", // Smaller section spacing
       },
+
+      // ⭕ Custom Border Radius
       borderRadius: {
-        xl: "1.25rem",
+        xl: "1.25rem", // Extra-large rounded corners
       },
     },
   },
