@@ -1,4 +1,4 @@
-import video1 from "../assets/vedio1.mp4";
+import video1 from "../assets/vd0.mp4";
 const Videosection = () => {
   return (
     <div className="relative w-full h-[38rem] text-white bg-primary px-28 py-16">
