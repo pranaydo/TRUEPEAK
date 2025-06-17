@@ -17,7 +17,7 @@ const ScienceBehindServices = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="w-full bg-[#e1c78f] rounded-[56px] max-w-6xl mx-auto my-16 px-8 py-12 shadow-lg">
+    <section className="w-full bg-[#e1c78f] rounded-[56px] max-w-6xl mx-auto my-16 pl-10 py-12 shadow-lg">
       <div className="flex flex-col md:flex-row md:items-start md:justify-between">
         <div className="flex-1">
           <h2 className="text-primary font-body font-semibold text-48 md:text-5xl mb-4">
@@ -50,7 +50,7 @@ const ScienceBehindServices = () => {
           className="flex-1 mt-8 md:mt-0 md:ml-8 relative"
           // style={{ width: "55%" }}
         >
-          <p className="text-primary text-lg md:text-xl font-body text-right z-10 relative w-[55%]">
+          <p className="text-primary text-lg md:text-xl font-body text-right z-10 relative w-[55%] pr-8">
             TruPeak Health integrates cutting-edge medical and wellness
             technologies that are designed to{" "}
             <span className="text-[#2c886a] font-semibold">
