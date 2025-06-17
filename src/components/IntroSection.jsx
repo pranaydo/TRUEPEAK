@@ -18,7 +18,7 @@ const IntroSection = () => {
         </div>
 
         {/* Right: Paragraph */}
-        <div className="md:w-1/2 text-white font-normal text-base sm:text-lg md:text-xl leading-relaxed text-center md:text-left mt-6 md:mt-0 ">
+        <div className="md:w-1/2 text-white font-normal text-40 sm:text-lg md:text-xl leading-relaxed text-center md:text-left mt-6 md:mt-0 ">
           <p>
             At TruPeak, we don’t just treat symptoms—
             <br className="hidden md:block" />

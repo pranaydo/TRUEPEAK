@@ -172,7 +172,7 @@ const TestimonialSection = () => {
               <img
                 src={person.image}
                 alt={person.name}
-                className="w-56 md:w-72 h-[340px] md:h-[420px] object-cover rounded-[36px] transition-all duration-300"
+                className="w-56 md:w-72 h-[340px] md:h-[420px]  object-cover rounded-[36px] transition-all duration-300"
                 style={{
                   boxShadow:
                     activeIndex === idx
@@ -180,7 +180,7 @@ const TestimonialSection = () => {
                       : "0 4px 16px 0 rgba(178,140,90,0.10)",
                 }}
               />
-              <div
+              {/* <div
                 className={`absolute bottom-8 left-0 w-full text-center font-semibold text-xl md:text-2xl transition-all duration-300
                   ${activeIndex === idx ? "text-[#1D253C]" : "text-[#E3D2A2]"}
                 `}
@@ -192,7 +192,7 @@ const TestimonialSection = () => {
                 }}
               >
                 {person.name}
-              </div>
+              </div> */}
               {/* Only show the quote box overlay for the active card on mobile */}
               {activeIndex === idx && (
                 <div className="block md:hidden absolute left-1/2 -bottom-20 transform -translate-x-1/2 w-[90%]">

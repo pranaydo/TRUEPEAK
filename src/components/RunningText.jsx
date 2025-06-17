@@ -11,7 +11,7 @@ const services = [
 ];
 
 const RunningText = () => (
-  <section className="w-full bg-white py-20 overflow-hidden">
+  <section className="w-full bg-white py-8 overflow-hidden">
     <div className="relative">
       <div className="logo-marquee flex items-center gap-10 animate-marquee whitespace-nowrap text-lg font-medium text-gray-700">
         {[...services, ...services].map((service, idx) => (
