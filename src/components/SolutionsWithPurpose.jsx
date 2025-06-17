@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -10,23 +10,77 @@ const cards = [
     id: 1,
     title: "Injectable Therapies",
     image: "https://www.visualsstock.com/details_watermark.php?filename=39515",
+    description:
+      "At TruPeak Health, our Injectable Therapies are designed to deliver essential nutrients, vitamins, and wellness compounds directly into your bloodstream for maximum absorption and immediate results. These therapies bypass the digestive system, ensuring your body receives the full benefit of each treatment.",
+    bullets: [
+      "Energy & Vitality (e.g., B12 shots)",
+      "Immunity Boosting",
+      "Metabolism & Weight Support",
+      "Skin, Hair & Nail Health",
+      "Mood & Cognitive Clarity",
+    ],
   },
   {
     id: 2,
     title: "Card 2",
     image: "https://www.visualsstock.com/details_watermark.php?filename=39515",
+    description:
+      "Card 2 focuses on holistic wellness, offering solutions that rejuvenate your body and mind for a balanced lifestyle.",
+    bullets: [
+      "Holistic Wellness",
+      "Mind & Body Balance",
+      "Stress Reduction",
+      "Improved Sleep",
+      "Enhanced Focus",
+    ],
   },
   {
     id: 3,
     title: "Card 3",
     image: "https://www.visualsstock.com/details_watermark.php?filename=39515",
+    description:
+      "Card 3 provides advanced therapies for rapid recovery and sustained energy, perfect for active lifestyles.",
+    bullets: [
+      "Rapid Recovery",
+      "Sustained Energy",
+      "Muscle Repair",
+      "Hydration Boost",
+      "Performance Support",
+    ],
   },
-  { id: 4, title: "Card 4", image: "https://via.placeholder.com/300x200" },
-  { id: 5, title: "Card 5", image: "https://via.placeholder.com/300x200" },
+  {
+    id: 4,
+    title: "Card 4",
+    image: "https://via.placeholder.com/300x200",
+    description:
+      "Card 4 delivers targeted solutions for skin, hair, and nail health, helping you look and feel your best.",
+    bullets: [
+      "Skin Health",
+      "Hair Strengthening",
+      "Nail Growth",
+      "Anti-Aging",
+      "Radiance Boost",
+    ],
+  },
+  {
+    id: 5,
+    title: "Card 5",
+    image: "https://via.placeholder.com/300x200",
+    description:
+      "Card 5 supports cognitive clarity and mood enhancement, empowering you to perform at your peak every day.",
+    bullets: [
+      "Cognitive Clarity",
+      "Mood Enhancement",
+      "Stress Management",
+      "Mental Energy",
+      "Focus & Productivity",
+    ],
+  },
 ];
 
 const GSAPPopOutCards = () => {
   const containerRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -52,6 +106,15 @@ const GSAPPopOutCards = () => {
           end: "+=1500",
           scrub: true,
           pin: true,
+          onUpdate: (self) => {
+            // Calculate active card based on progress
+            const progress = self.progress;
+            const index = Math.min(
+              cards.length - 1,
+              Math.floor(progress * cards.length)
+            );
+            setActiveIndex(index);
+          },
         },
       });
 
@@ -84,28 +147,22 @@ const GSAPPopOutCards = () => {
         Solutions With Purpose
       </h2>
 
-      {/* Right Paragraph Description */}
-      <div className="absolute top-[120px] right-[80px] max-w-sm text-14 font-medium leading-relaxed text-gray-300">
-        <p>
-          At TruPeak Health, our Injectable Therapies are designed to deliver
-          essential nutrients, vitamins, and wellness compounds directly into
-          your bloodstream for maximum absorption and immediate results. These
-          therapies bypass the digestive system, ensuring your body receives the
-          full benefit of each treatment.
-        </p>
+      {/* Right Paragraph Description (Dynamic) */}
+      <div className="absolute top-[120px] right-[80px] max-w-sm text-14 font-medium leading-relaxed text-gray-300 transition-all duration-300">
+        <p>{cards[activeIndex].description}</p>
       </div>
 
-      {/* Bottom Left Bullet Points */}
-      <div className="absolute bottom-[80px] left-[80px] max-w-sm text-14 font-medium  text-gray-300 leading-relaxed">
+      {/* Bottom Left Bullet Points (Dynamic) */}
+      <div className="absolute bottom-[80px] left-[80px] max-w-sm text-14 font-medium text-gray-300 leading-relaxed transition-all duration-300">
         <p className="mb-2">
-          We offer a curated range of injectables tailored to support:
+          {activeIndex === 0
+            ? "We offer a curated range of injectables tailored to support:"
+            : "Key Benefits:"}
         </p>
         <ul className="list-disc ml-5 space-y-1">
-          <li>Energy & Vitality (e.g., B12 shots)</li>
-          <li>Immunity Boosting</li>
-          <li>Metabolism & Weight Support</li>
-          <li>Skin, Hair & Nail Health</li>
-          <li>Mood & Cognitive Clarity</li>
+          {cards[activeIndex].bullets.map((bullet, idx) => (
+            <li key={idx}>{bullet}</li>
+          ))}
         </ul>
       </div>
 
@@ -133,12 +190,10 @@ const GSAPPopOutCards = () => {
                 className="w-full h-full object-cover rounded-t-[30px]"
               />
             </div>
-            {/* Title & Button: 20% of card height */}
-            {/* // ...existing code... */}
             {/* Title & Button: 20% of card height, in one line, bigger title */}
             <div
               className="flex items-center justify-between px-6 py-2"
-              style={{ height: "25%" }}
+              style={{ height: "20%" }}
             >
               <h3 className="text-xl font-bold leading-tight">{card.title}</h3>
               <button className="px-2 py-1 bg-white rounded-full text-semibold text-14 shadow hover:bg-gray-200">
