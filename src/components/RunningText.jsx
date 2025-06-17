@@ -17,7 +17,7 @@ const RunningText = () => (
         {[...services, ...services].map((service, idx) => (
           <div
             key={idx}
-            className="flex text-40 font-body font-semibold items-center gap-2"
+            className="flex text-40 font-body text-gray-500 font-semibold items-center gap-2"
           >
             <span>{service}</span>
             <DownArrow className="w-4 h-4 text-gray-500" />

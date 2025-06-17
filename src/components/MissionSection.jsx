@@ -39,7 +39,7 @@ const MissionSection = () => {
               ["Countries in", "Services", 38],
             ].map(([line1, line2, end, suffix], idx) => (
               <div key={idx} className="flex flex-col items-center">
-                <div className="text-4xl md:text-5xl font-bold font-body text-[#1a2233] mb-2">
+                <div className="text-4xl md:text-5xl font-bold font-body text-gray-500 mb-2">
                   {inView && <CountUp end={end} duration={2.5} separator="," />}
                   {suffix || "+"}
                 </div>

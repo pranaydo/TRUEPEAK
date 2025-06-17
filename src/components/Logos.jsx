@@ -21,7 +21,7 @@ const SeenInSection = () => (
             key={idx}
             src={logo.src}
             alt={logo.alt}
-            className="h-20 w-auto grayscale opacity-80"
+            className="h-10 w-auto filter grayscale brightness-75 opacity-40"
           />
         ))}
       </div>
