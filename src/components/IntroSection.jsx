@@ -4,7 +4,6 @@ const IntroSection = () => {
   return (
     <section className="w-full bg-primary py-12 md:py-20 px-4 shadow-xl border-b-4 border-[#7ec3b0] relative">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-20 relative z-10">
-
         {/* Left: Headline */}
         <div className="md:w-1/2 text-center md:text-right mx-5">
           <h2 className="text-secondary font-body font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug">
@@ -31,7 +30,7 @@ const IntroSection = () => {
       </div>
 
       {/* 🔻 Down Arrow */}
-      <div className="absolute left-1/4 -translate-x-1/2 bottom-[-3.5rem] sm:bottom-[-4rem]">
+      <div className="absolute left-28 -translate-x-1/2 bottom-[-3.5rem] sm:bottom-[-4rem]">
         <div className="w-24 h-24 sm:w-28 sm:h-28 bg-[#2C886A] rounded-full flex items-center justify-center shadow-2xl">
           <svg
             width="64"

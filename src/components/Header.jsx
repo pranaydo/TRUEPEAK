@@ -56,10 +56,16 @@ const Header = () => {
         </button>
 
         {/* 🔗 Left Nav (desktop only) */}
-        <nav className="hidden md:flex space-x-6 font-semibold text-2xl text-white">
-          <a href="#" className="hover:text-secondary">Services</a>
-          <a href="#" className="hover:text-secondary">Locations</a>
-          <a href="#" className="hover:text-secondary">At-Home</a>
+        <nav className="hidden md:flex space-x-6 font-semibold text-2xl text-white ml-10 gap-[38px]">
+          <a href="#" className="hover:text-secondary">
+            Services
+          </a>
+          <a href="#" className="hover:text-secondary">
+            Locations
+          </a>
+          <a href="#" className="hover:text-secondary">
+            At-Home
+          </a>
         </nav>
 
         {/* 🔹 Logo - Centered */}
@@ -72,9 +78,13 @@ const Header = () => {
         </div>
 
         {/* 🔗 Right Nav (desktop only) */}
-        <div className="hidden md:flex items-center space-x-6 font-semibold text-2xl text-white">
-          <a href="#" className="hover:text-secondary">About Us</a>
-          <a href="#" className="hover:text-secondary">Blogs</a>
+        <div className="hidden md:flex items-center space-x-6 font-semibold text-2xl text-white  mr-10 gap-[38px]">
+          <a href="#" className="hover:text-secondary">
+            About Us
+          </a>
+          <a href="#" className="hover:text-secondary">
+            Blogs
+          </a>
           <button className="bg-[#18243A70] text-white px-6 py-2 rounded-full hover:bg-[#505a6e] transition">
             Join Us
           </button>
@@ -84,18 +94,20 @@ const Header = () => {
         {menuOpen && (
           <div className="fixed inset-0 bg-black/80 z-20 flex items-center justify-center md:hidden">
             <div className="bg-white rounded-xl px-8 py-10 space-y-6 text-[#1a1a38] font-semibold text-center w-4/5 max-w-xs">
-              {["Services", "Locations", "At-Home", "About Us", "Blogs"].map((item, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="block text-lg hover:text-secondary"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item}
-                </a>
-              ))}
+              {["Services", "Locations", "At-Home", "About Us", "Blogs"].map(
+                (item, index) => (
+                  <a
+                    key={index}
+                    href="#"
+                    className="block text-lg hover:text-secondary"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item}
+                  </a>
+                )
+              )}
               <button
-                className="bg-[#616c84] text-white w-full py-2 rounded-full hover:bg-[#505a6e] transition"
+                className="bg-[#18243A70] text-white w-full py-2 rounded-full hover:bg-[#505a6e] transition"
                 onClick={() => setMenuOpen(false)}
               >
                 Join Us
