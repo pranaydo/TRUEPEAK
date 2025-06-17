@@ -1,7 +1,6 @@
-import React from "react";
 import Header from "./components/Header";
 import IntroSection from "./components/IntroSection";
-import Logos from "./components/logos";
+import SeenInSection from "./components/logos";
 import MissionSection from "./components/MissionSection";
 import RunningText from "./components/RunningText";
 import ScienceBehindServices from "./components/ScienceBehindServices";
@@ -24,7 +23,7 @@ const HomeLayout = () => {
     <>
       <Header />
       <IntroSection />
-      <Logos />
+      <SeenInSection />
       <MissionSection />
       <RunningText />
       <GSAPCardStack />
