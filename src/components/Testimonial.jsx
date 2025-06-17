@@ -137,13 +137,13 @@ const TestimonialSection = () => {
       <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
         {/* Left Side */}
         <div className="flex-1 flex flex-col items-start justify-center md:justify-start md:mt-16">
-          <h2 className="text-3xl md:text-5xl font-semibold text-[#1D253C] leading-tight mb-8">
+          <h2 className="text-3xl md:text-5xl font-semibold font-body text-[#1D253C] leading-tight mb-8">
             Our Expertise.
             <br />
             Your Edge.
           </h2>
           <div
-            className="bg-[#B28C5A] text-[#1D253C] p-6 rounded-2xl shadow-md text-base md:text-lg mt-4 font-medium max-w-2xl w-[133%] z-[100]"
+            className="bg-[#B28C5A] text-[#1D253C] p-6 rounded-2xl shadow-md text-base md:text-lg mt-4 font-medium font-body max-w-2xl w-[133%] z-[100]"
             style={{ color: "#1D253C" }}
           >
             “{testimonials[activeIndex].quote}”
@@ -207,7 +207,7 @@ const TestimonialSection = () => {
       </div>
       {/* Name below cards for desktop */}
       <div className="hidden md:flex justify-center mt-8">
-        <span className="text-[#1D253C] text-2xl font-bold">
+        <span className="text-[#1D253C] text-2xl font-bold font-body">
           {testimonials[activeIndex].name}
         </span>
       </div>
