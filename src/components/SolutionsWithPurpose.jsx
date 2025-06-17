@@ -150,12 +150,12 @@ const GSAPPopOutCards = () => {
       ref={containerRef}
     >
       {/* Section Title */}
-      <h2 className="absolute top-10 left-1/2 transform -translate-x-1/2 text-3xl font-bold tracking-wide text-[#F8F6F3]">
+      <h2 className="absolute top-10 left-1/2 transform -translate-x-1/2 text-40 font-semibold text-body tracking-wide text-secondary">
         Solutions With Purpose
       </h2>
 
       {/* SVG Line */}
-      <svg
+      {/* <svg
         className="pointer-events-none absolute"
         style={{
           left: 0,
@@ -171,7 +171,7 @@ const GSAPPopOutCards = () => {
           stroke="#fff"
           strokeWidth="3"
         />
-      </svg>
+      </svg> */}
 
       {/* Right Paragraph Description (Animated) */}
       <AnimatePresence mode="wait">
