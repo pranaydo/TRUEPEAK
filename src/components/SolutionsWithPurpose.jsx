@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { motion, AnimatePresence } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -107,7 +108,6 @@ const GSAPPopOutCards = () => {
           scrub: true,
           pin: true,
           onUpdate: (self) => {
-            // Calculate active card based on progress
             const progress = self.progress;
             const index = Math.min(
               cards.length - 1,
@@ -137,6 +137,13 @@ const GSAPPopOutCards = () => {
     return () => ctx.revert();
   }, []);
 
+  // SVG line coordinates (adjust as needed for your layout)
+  const svgWidth = 700;
+  const svgHeight = 550;
+  const start = { x: 620, y: 380 }; // near card edge (right-bottom)
+  const corner = { x: 320, y: 480 }; // corner point
+  const end = { x: 220, y: 620 }; // above bullet points
+
   return (
     <div
       className="relative w-full h-screen bg-[#0f172a] text-white overflow-hidden"
@@ -147,39 +154,79 @@ const GSAPPopOutCards = () => {
         Solutions With Purpose
       </h2>
 
-      {/* Right Paragraph Description (Dynamic) */}
-      <div className="absolute top-[120px] right-[80px] max-w-sm text-14 font-medium leading-relaxed text-gray-300 transition-all duration-300">
-        <p>{cards[activeIndex].description}</p>
-      </div>
+      {/* SVG Line */}
+      <svg
+        className="pointer-events-none absolute"
+        style={{
+          left: 0,
+          top: 0,
+          zIndex: 20,
+        }}
+        width={svgWidth}
+        height={svgHeight}
+      >
+        <polyline
+          points={`${start.x},${start.y} ${corner.x},${corner.y} ${end.x},${end.y}`}
+          fill="none"
+          stroke="#fff"
+          strokeWidth="3"
+        />
+      </svg>
 
-      {/* Bottom Left Bullet Points (Dynamic) */}
-      <div className="absolute bottom-[80px] left-[80px] max-w-sm text-14 font-medium text-gray-300 leading-relaxed transition-all duration-300">
-        <p className="mb-2">
-          {activeIndex === 0
-            ? "We offer a curated range of injectables tailored to support:"
-            : "Key Benefits:"}
-        </p>
-        <ul className="list-disc ml-5 space-y-1">
-          {cards[activeIndex].bullets.map((bullet, idx) => (
-            <li key={idx}>{bullet}</li>
-          ))}
-        </ul>
-      </div>
+      {/* Right Paragraph Description (Animated) */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeIndex + "-desc"}
+          className="absolute top-[120px] right-[80px] max-w-sm text-14 font-medium leading-relaxed text-gray-300"
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -100, opacity: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <p>{cards[activeIndex].description}</p>
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Bottom Left Bullet Points (Animated) */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeIndex + "-bullets"}
+          className="absolute bottom-[80px] left-[80px] max-w-sm text-14 font-medium text-gray-300 leading-relaxed"
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: 100, opacity: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <p className="mb-2">
+            {activeIndex === 0
+              ? "We offer a curated range of injectables tailored to support:"
+              : "Key Benefits:"}
+          </p>
+          <ul className="list-disc ml-5 space-y-1">
+            {cards[activeIndex].bullets.map((bullet, idx) => (
+              <li key={idx}>{bullet}</li>
+            ))}
+          </ul>
+        </motion.div>
+      </AnimatePresence>
 
       {/* Card Stack */}
       {cards.map((card, i) => {
         const rotation = (i - 2) * 10;
         const offset = i * 10;
+        const isActive = i === activeIndex;
 
         return (
           <div
             key={card.id}
-            className={`card-${i} absolute w-72 h-[360px] bg-[#c69c6d] rounded-[30px] shadow-xl text-black transition-all duration-300 overflow-hidden flex flex-col`}
+            className={`card-${i} absolute w-72 h-[360px] bg-[#c69c6d] rounded-[30px] shadow-xl text-black transition-all duration-300 overflow-hidden flex flex-col
+              ${isActive ? "scale-105 shadow-2xl z-50" : "opacity-80"}
+            `}
             style={{
               transform: `translate(-50%, -50%) rotate(${rotation}deg) translate(${offset}px, ${offset}px)`,
               top: "50%",
               left: "50%",
-              zIndex: cards.length - i,
+              zIndex: cards.length - i + (isActive ? 100 : 0),
             }}
           >
             {/* Image: 80% of card height */}
@@ -206,5 +253,4 @@ const GSAPPopOutCards = () => {
     </div>
   );
 };
-
 export default GSAPPopOutCards;
