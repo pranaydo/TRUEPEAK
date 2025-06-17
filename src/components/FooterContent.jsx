@@ -13,7 +13,7 @@ const FooterContent = () => {
           <div className="mt-8 mb-4 text-20 font-medium">
             Subscribe to our Newsletter
           </div>
-          <form className="flex items-center max-w-md">
+          {/* <form className="flex items-center max-w-md">
             <input
               type="email"
               placeholder="Your Email..."
@@ -24,6 +24,35 @@ const FooterContent = () => {
               className="bg-[#1D253C] border-2 border-[#E3D2A2] border-l-0 px-6 py-3 rounded-r-full rounded-l-none flex items-center justify-center"
             >
               <span className="text-[#E3D2A2] text-2xl">&#8594;</span>
+            </button>
+          </form> */}
+          <form className="flex items-center border-2 border-[#E1C78F] rounded-full bg-[#1D253C] px-2 py-1 max-w-md">
+            <input
+              type="email"
+              placeholder="Your Email..."
+              className="flex-1 bg-transparent text-white placeholder-[#E3D2A2] px-4 py-2 text-lg focus:outline-none"
+            />
+            <button
+              type="submit"
+              className="bg-[#E1C78F] w-9 h-9 rounded-full flex items-center justify-center ml-2"
+            >
+              <span className="text-[#1D253C] text-xl">
+                {" "}
+                <svg
+                  width="12"
+                  height="24"
+                  viewBox="0 0 12 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.157 12.7111L4.5 18.3681L3.086 16.9541L8.036 12.0041L3.086 7.05414L4.5 5.64014L10.157 11.2971C10.3445 11.4847 10.4498 11.739 10.4498 12.0041C10.4498 12.2693 10.3445 12.5236 10.157 12.7111Z"
+                    fill="#18243A"
+                  />
+                </svg>
+              </span>
             </button>
           </form>
         </div>
