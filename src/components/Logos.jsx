@@ -9,6 +9,14 @@ const logos = [
   { src: cnn, alt: "CNN" },
   { src: cosmo, alt: "Cosmopolitan" },
   { src: forbes, alt: "Forbes" },
+  { src: abc, alt: "ABC" },
+  { src: cnn, alt: "CNN" },
+  { src: cosmo, alt: "Cosmopolitan" },
+  { src: forbes, alt: "Forbes" },
+  { src: abc, alt: "ABC" },
+  { src: cnn, alt: "CNN" },
+  { src: cosmo, alt: "Cosmopolitan" },
+  { src: forbes, alt: "Forbes" },
   // { src: wsj, alt: "Wall Street Journal" },
 ];
 
