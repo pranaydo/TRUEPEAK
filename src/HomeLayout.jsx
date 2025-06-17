@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import IntroSection from "./components/IntroSection";
-import SeenInSection from "./components/logos";
+import SeenInSection from "./components/Logos";
 import MissionSection from "./components/MissionSection";
 import RunningText from "./components/RunningText";
 import ScienceBehindServices from "./components/ScienceBehindServices";
