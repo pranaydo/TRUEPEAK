@@ -3,26 +3,29 @@ import ringImage from "../assets/ringImage.png"; // replace with actual image pa
 
 const TransformNow = () => {
   return (
-    <section className="flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-16 py-12 bg-white">
-      {/* Left: Text & Button */}
-      <div className="text-center lg:text-left max-w-xl">
-        <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 leading-snug mb-6">
-          This is not just about living longer. <br />
-          It’s about living healthier longer.
-        </h2>
-        <button className="bg-green-600 text-white text-lg font-medium px-6 py-3 rounded-xl shadow hover:bg-green-700 transition">
-          Transform Now
-        </button>
+    <section className="relative bg-white min-h-[600px] overflow-hidden">
+      {/* Content with padding */}
+      <div className="flex flex-col lg:flex-row items-center justify-between px-6 md:px-24 py-24 relative z-10">
+        {/* Left: Text & Button */}
+        <div className="flex-1 flex flex-col justify-center items-start">
+          <h2 className="text-48 md:text-6xl font-medium font-body text-[#232B3A] leading-tight mb-12">
+            This is not just about living longer.
+            <br />
+            It’s about living healthier longer.
+          </h2>
+          <button className="bg-[#2C886A] text-white text-36 font-bold  font-body px-14 py-4 rounded-[40px] shadow-lg hover:bg-[#287256] transition mt-4">
+            Transform Now
+          </button>
+        </div>
+        {/* Spacer for layout */}
+        <div className="flex-1" />
       </div>
-
-      {/* Right: Decorative Rings Image */}
-      <div className="mb-10 lg:mb-0">
-        <img
-          src={ringImage}
-          alt="Decorative rings"
-          className="w-64 md:w-80 lg:w-[420px] mx-auto"
-        />
-      </div>
+      {/* Absolutely positioned image, outside the padded content */}
+      <img
+        src={ringImage}
+        alt="Decorative rings"
+        className="absolute right-0 bottom-0 w-[65vw] max-w-[900px] h-auto object-contain pointer-events-none select-none m-0 p-0 z-0"
+      />
     </section>
   );
 };
