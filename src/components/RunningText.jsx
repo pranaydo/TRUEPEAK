@@ -15,7 +15,7 @@ const RunningText = () => (
     <div className="relative">
       <div className="logo-marquee flex items-center gap-10 animate-marquee whitespace-nowrap text-lg font-medium text-gray-700">
         {[...services, ...services].map((service, idx) => (
-          <div key={idx} className="flex items-center gap-2">
+          <div key={idx} className="flex text-40 text-body items-center gap-2">
             <span>{service}</span>
             <DownArrow className="w-4 h-4 text-gray-500" />
           </div>
