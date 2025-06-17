@@ -9,11 +9,11 @@ const logos = [
   { src: cnn, alt: "CNN" },
   { src: cosmo, alt: "Cosmopolitan" },
   { src: forbes, alt: "Forbes" },
-  { src: wsj, alt: "Wall Street Journal" },
+  // { src: wsj, alt: "Wall Street Journal" },
 ];
 
 const SeenInSection = () => (
-  <section className="w-full bg-white py-32 overflow-hidden">
+  <section className="w-full bg-white py-16 overflow-hidden">
     <div className="relative">
       <div className="logo-marquee flex items-center gap-12 animate-marquee">
         {logos.concat(logos).map((logo, idx) => (

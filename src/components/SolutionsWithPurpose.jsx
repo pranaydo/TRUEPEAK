@@ -150,7 +150,7 @@ const GSAPPopOutCards = () => {
       ref={containerRef}
     >
       {/* Section Title */}
-      <h2 className="absolute top-10 left-1/2 transform -translate-x-1/2 text-40 font-semibold text-body tracking-wide text-secondary">
+      <h2 className="absolute top-10 left-1/2 transform -translate-x-1/2 text-40 font-semibold font-body tracking-wide text-secondary">
         Solutions With Purpose
       </h2>
 
@@ -177,7 +177,7 @@ const GSAPPopOutCards = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={activeIndex + "-desc"}
-          className="absolute top-[120px] right-[80px] max-w-sm text-14 font-medium leading-relaxed text-gray-300"
+          className="absolute top-[120px] right-[80px] max-w-sm text-14 font-medium font-body leading-relaxed text-gray-300"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -100, opacity: 0 }}
@@ -202,7 +202,7 @@ const GSAPPopOutCards = () => {
               ? "We offer a curated range of injectables tailored to support:"
               : "Key Benefits:"}
           </p>
-          <ul className="list-disc ml-5 space-y-1">
+          <ul className="list-disc ml-5 space-y-1 font-body">
             {cards[activeIndex].bullets.map((bullet, idx) => (
               <li key={idx}>{bullet}</li>
             ))}
@@ -243,7 +243,7 @@ const GSAPPopOutCards = () => {
               style={{ height: "20%" }}
             >
               <h3 className="text-xl font-bold leading-tight">{card.title}</h3>
-              <button className="px-2 py-1 bg-white rounded-full text-semibold text-14 shadow hover:bg-gray-200">
+              <button className="px-2 py-1 bg-white rounded-full text-semibold text-14 font-body shadow hover:bg-gray-200">
                 Know More
               </button>
             </div>
