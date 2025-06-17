@@ -146,7 +146,7 @@ const GSAPPopOutCards = () => {
 
   return (
     <div
-      className="relative w-full h-screen bg-[#0f172a] text-white overflow-hidden"
+      className="relative w-full h-screen bg-[#0f172a] text-white overflow-hidden rounded-[3rem]"
       ref={containerRef}
     >
       {/* Section Title */}
