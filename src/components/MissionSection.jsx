@@ -19,7 +19,7 @@ const MissionSection = () => (
       </p>
 
       {/* Stats Card */}
-      <div className="relative w-[95vw] max-w-[1100px] bg-[#f7e6b7] rounded-[2rem] shadow-xl px-8 py-8 mt-4 flex flex-col -mr-16 z-20">
+      <div className="relative w-[95vw] max-w-[1100px] bg-[#ffffff73] backdrop-blur-[30px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] rounded-[2rem] px-8 py-8 mt-4 flex flex-col -mr-16 z-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-8">
           <div className="flex flex-col items-center">
             <div className="text-4xl md:text-5xl font-bold text-[#1a2233] mb-2">
