@@ -9,10 +9,18 @@ const cards = [
   {
     id: 1,
     title: "Injectable Therapies",
-    image: "https://via.placeholder.com/300x200",
+    image: "https://www.visualsstock.com/details_watermark.php?filename=39515",
   },
-  { id: 2, title: "Card 2", image: "https://via.placeholder.com/300x200" },
-  { id: 3, title: "Card 3", image: "https://via.placeholder.com/300x200" },
+  {
+    id: 2,
+    title: "Card 2",
+    image: "https://www.visualsstock.com/details_watermark.php?filename=39515",
+  },
+  {
+    id: 3,
+    title: "Card 3",
+    image: "https://www.visualsstock.com/details_watermark.php?filename=39515",
+  },
   { id: 4, title: "Card 4", image: "https://via.placeholder.com/300x200" },
   { id: 5, title: "Card 5", image: "https://via.placeholder.com/300x200" },
 ];
@@ -77,7 +85,7 @@ const GSAPPopOutCards = () => {
       </h2>
 
       {/* Right Paragraph Description */}
-      <div className="absolute top-[120px] right-[80px] max-w-sm text-sm leading-relaxed text-gray-300">
+      <div className="absolute top-[120px] right-[80px] max-w-sm text-14 font-medium leading-relaxed text-gray-300">
         <p>
           At TruPeak Health, our Injectable Therapies are designed to deliver
           essential nutrients, vitamins, and wellness compounds directly into
@@ -88,7 +96,7 @@ const GSAPPopOutCards = () => {
       </div>
 
       {/* Bottom Left Bullet Points */}
-      <div className="absolute bottom-[80px] left-[80px] max-w-sm text-sm text-gray-300 leading-relaxed">
+      <div className="absolute bottom-[80px] left-[80px] max-w-sm text-14 font-medium  text-gray-300 leading-relaxed">
         <p className="mb-2">
           We offer a curated range of injectables tailored to support:
         </p>
@@ -109,7 +117,7 @@ const GSAPPopOutCards = () => {
         return (
           <div
             key={card.id}
-            className={`card-${i} absolute w-72 h-[420px] bg-[#c69c6d] rounded-[30px] shadow-xl text-black transition-all duration-300 overflow-hidden`}
+            className={`card-${i} absolute w-72 h-[360px] bg-[#c69c6d] rounded-[30px] shadow-xl text-black transition-all duration-300 overflow-hidden flex flex-col`}
             style={{
               transform: `translate(-50%, -50%) rotate(${rotation}deg) translate(${offset}px, ${offset}px)`,
               top: "50%",
@@ -117,18 +125,23 @@ const GSAPPopOutCards = () => {
               zIndex: cards.length - i,
             }}
           >
-            <div className="relative w-full h-[65%]">
+            {/* Image: 80% of card height */}
+            <div className="w-full p-6" style={{ height: "80%" }}>
               <img
                 src={card.image}
                 alt={card.title}
                 className="w-full h-full object-cover rounded-t-[30px]"
               />
             </div>
-            <div className="p-4 flex items-center justify-between h-[35%]">
-              <h3 className="text-md font-semibold leading-tight">
-                {card.title}
-              </h3>
-              <button className="ml-2 px-4 py-2 bg-white rounded-full text-sm shadow hover:bg-gray-200">
+            {/* Title & Button: 20% of card height */}
+            {/* // ...existing code... */}
+            {/* Title & Button: 20% of card height, in one line, bigger title */}
+            <div
+              className="flex items-center justify-between px-6 py-2"
+              style={{ height: "25%" }}
+            >
+              <h3 className="text-xl font-bold leading-tight">{card.title}</h3>
+              <button className="px-2 py-1 bg-white rounded-full text-semibold text-14 shadow hover:bg-gray-200">
                 Know More
               </button>
             </div>
