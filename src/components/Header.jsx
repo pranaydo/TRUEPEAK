@@ -85,7 +85,7 @@ const Header = () => {
           <a href="#" className="hover:text-secondary">
             Blogs
           </a>
-          <button className="bg-[#505a6e] text-white px-6 py-2 rounded-full hover:bg-secondary shadow-lg transition">
+          <button className="bg-[#505a6e] text-white px-6 py-2 rounded-full hover:bg-secondary shadow-lg transition font-navbar">
             Join Us
           </button>
         </div>

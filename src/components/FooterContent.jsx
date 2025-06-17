@@ -2,7 +2,7 @@ import React from "react";
 
 const FooterContent = () => {
   return (
-    <footer className="bg-[#1D253C] text-white px-6 md:px-20 py-12 font-body">
+    <footer className="bg-[#1D253C] font-body text-white px-6 md:px-20 py-12 font-body">
       <div className="flex flex-col md:flex-row md:justify-between gap-12">
         {/* Left Section */}
         <div className="flex-1 min-w-[320px]">
@@ -10,7 +10,7 @@ const FooterContent = () => {
             Transform into the <br />
             new <span className="text-[#E1C78F] ">You</span>
           </h2>
-          <div className="mt-8 mb-4 text-20 font-medium">
+          <div className="mt-8 mb-4 text-20  font-medium">
             Subscribe to our Newsletter
           </div>
           {/* <form className="flex items-center max-w-md">
