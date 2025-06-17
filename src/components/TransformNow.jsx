@@ -3,12 +3,12 @@ import ringImage from "../assets/ringImage.png"; // replace with actual image pa
 
 const TransformNow = () => {
   return (
-    <section className="relative bg-white min-h-[600px] overflow-hidden">
+    <section className="relative bg-white min-h-[600px] overflow-hidden px-12">
       {/* Content with padding */}
       <div className="flex flex-col lg:flex-row items-center justify-between px-6 md:px-24 py-24 relative z-10">
         {/* Left: Text & Button */}
         <div className="flex-1 flex flex-col justify-center items-start">
-          <h2 className="text-48 md:text-6xl font-medium font-body text-[#232B3A] leading-tight mb-12">
+          <h2 className="text-36 md:text-6xl font-medium font-body text-[#232B3A] leading-tight mb-12">
             This is not just about living longer.
             <br />
             It’s about living healthier longer.
