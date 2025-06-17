@@ -12,9 +12,9 @@ export default {
 
       // 🖋 Custom Fonts
       fontFamily: {
-        navbar: ["Nunito", "sans-serif"], // For navigation bar text
+        navbar: ["Nunito", "Nunito"], // For navigation bar text
         heading: ["Poppins", "sans-serif"], // For titles/headings
-        body: ["Montserrat", "sans-serif"], // For paragraph text
+        body: ["Montserrat", "Montserrat"], // For paragraph text
       },
 
       // 🔠 Font Sizes

@@ -23,11 +23,11 @@ const ScienceBehindServices = () => {
           <h2 className="text-primary font-body font-semibold text-48 md:text-5xl mb-4">
             The Science Behind <br /> Our Services
           </h2>
-          <button className="float-right md:float-none bg-white border-4 border-[#725E44] text-[#6b5b36] font-semibold px-8 py-2 rounded-full text-xl mb-8 md:mb-0 hover:bg-[#f5e7c6] transition">
+          <button className="float-right md:float-none bg-white border-4 border-[#725E44] text-[#6b5b36] font-semibold px-4 mt-10 ml-20 rounded-full text-xl mb-8 md:mb-0 hover:bg-[#f5e7c6] transition">
             Know More
           </button>
           <br></br>
-          <div className="pt-[56px]">
+          <div className="pt-[56px] ml-28">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="70"
@@ -50,7 +50,7 @@ const ScienceBehindServices = () => {
           className="flex-1 mt-8 md:mt-0 md:ml-8 relative"
           // style={{ width: "55%" }}
         >
-          <p className="text-primary text-lg md:text-xl font-body text-right z-10 relative w-[55%] pr-8">
+          <p className="text-primary text-lg md:text-xl font-body text-right z-10 relative w-[55%] pr-8 mt-10">
             TruPeak Health integrates cutting-edge medical and wellness
             technologies that are designed to{" "}
             <span className="text-[#2c886a] font-semibold">

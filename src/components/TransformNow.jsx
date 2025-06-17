@@ -13,7 +13,7 @@ const TransformNow = () => {
             <br />
             It’s about living healthier longer.
           </h2>
-          <button className="bg-[#2C886A] text-white text-36 font-bold  font-body px-14 py-4 rounded-[40px] shadow-lg hover:bg-[#287256] transition mt-4">
+          <button className="bg-[#2C886A] text-white text-36 font-bold  font-body px-10 py-2 rounded-[40px] shadow-lg hover:bg-[#287256] transition mt-4">
             Transform Now
           </button>
         </div>

@@ -56,8 +56,8 @@ const Header = () => {
         </button>
 
         {/* 🔗 Left Nav (desktop only) */}
-        <nav className="hidden md:flex space-x-6 font-semibold text-2xl text-white ml-10 gap-[38px]">
-          <a href="#" className="hover:text-secondary">
+        <nav className="hidden md:flex space-x-6 font-normal text-2xl text-white ml-10 gap-[38px]">
+          <a href="#" className="hover:text-secondary font-navbar">
             Services
           </a>
           <a href="#" className="hover:text-secondary">
@@ -78,14 +78,14 @@ const Header = () => {
         </div>
 
         {/* 🔗 Right Nav (desktop only) */}
-        <div className="hidden md:flex items-center space-x-6 font-semibold text-2xl text-white  mr-10 gap-[38px]">
+        <div className="hidden md:flex items-center space-x-6 font-normal text-2xl text-white  mr-10 gap-[38px]">
           <a href="#" className="hover:text-secondary">
             About Us
           </a>
           <a href="#" className="hover:text-secondary">
             Blogs
           </a>
-          <button className="bg-[#18243A70] text-white px-6 py-2 rounded-full hover:bg-[#505a6e] transition">
+          <button className="bg-[#505a6e] text-white px-6 py-2 rounded-full hover:bg-secondary hover:shadow-lg transition">
             Join Us
           </button>
         </div>
@@ -107,7 +107,7 @@ const Header = () => {
                 )
               )}
               <button
-                className="bg-[#18243A70] text-white w-full py-2 rounded-full hover:bg-[#505a6e] transition"
+                className=" bg-white text-white w-full py-2 rounded-full hover:bg-[#505a6e] transition"
                 onClick={() => setMenuOpen(false)}
               >
                 Join Us
