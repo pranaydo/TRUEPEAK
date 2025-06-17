@@ -60,10 +60,10 @@ const Header = () => {
           <a href="#" className="hover:text-secondary font-navbar">
             Services
           </a>
-          <a href="#" className="hover:text-secondary">
+          <a href="#" className="hover:text-secondary font-navbar">
             Locations
           </a>
-          <a href="#" className="hover:text-secondary">
+          <a href="#" className="hover:text-secondary font-navbar">
             At-Home
           </a>
         </nav>
@@ -78,7 +78,7 @@ const Header = () => {
         </div>
 
         {/* 🔗 Right Nav (desktop only) */}
-        <div className="hidden md:flex items-center space-x-6 font-normal text-2xl text-white  mr-10 gap-[38px]">
+        <div className="hidden md:flex items-center space-x-6 font-normal text-2xl text-white  mr-10 gap-[38px] font-navbar">
           <a href="#" className="hover:text-secondary">
             About Us
           </a>
